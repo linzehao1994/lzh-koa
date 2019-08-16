@@ -1,0 +1,30 @@
+{
+  "name": "lzh-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "nodemon test/index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linzehao1994/lzh-koa.git"
+  },
+  "keywords": [
+    "lzh-koa",
+    "koa"
+  ],
+  "author": "linzehao1994",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linzehao1994/lzh-koa/issues"
+  },
+  "homepage": "https://github.com/linzehao1994/lzh-koa#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0"
+  }
+}
