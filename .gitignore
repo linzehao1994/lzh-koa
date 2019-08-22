@@ -1,2 +1,6 @@
 node_modules
+
+src/config/*
+!src/config/default.ts
+
 package-lock.json
