@@ -1,0 +1,6 @@
+type Query {
+  sample(
+    _id: [ID]
+    name: String
+  ): SampleCollection
+}

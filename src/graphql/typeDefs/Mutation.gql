@@ -1,0 +1,14 @@
+type Mutation {
+  createSample(
+    name: String!
+  ): Sample
+
+  updateSample(
+    _id: ID!
+    name: String
+  ): Sample
+
+  deleteSample(
+    _id: ID!
+  ): Boolean
+}

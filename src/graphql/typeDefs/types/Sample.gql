@@ -1,0 +1,10 @@
+type Sample {
+  _id: ID
+  name: String
+  createdAt: DateTime
+}
+
+type SampleCollection {
+  count: Int
+  data: [Sample]
+}

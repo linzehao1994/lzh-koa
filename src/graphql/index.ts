@@ -1,16 +1,15 @@
-import { ApolloServer, gql } from 'apollo-server-koa';
+import fs from 'fs';
+import { map } from 'lodash';
+import read from 'fs-readdir-recursive';
+import { ApolloServer } from 'apollo-server-koa';
 
-const typeDefs = gql`
-  type Query {
-    hello: String
-  }
-`;
+import resolvers from './resolvers';
 
-const resolvers = {
-  Query: {
-    hello: () => 'Hello world!'
-  }
-};
+const path = __dirname + '/typeDefs/';
+const files = read(path);
+const typeDefs = map(files, file => {
+  return fs.readFileSync(path + file, 'utf8');
+}).join('\n');
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
