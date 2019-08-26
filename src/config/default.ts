@@ -3,6 +3,11 @@ export const port = 3000;
 
 export const logPath = __dirname + '/../../log';
 
+export const adminApi = {
+  url: 'http://account.linzehao.cn',
+  clientId: ''
+};
+
 export const mongo = {
   uri: null,
   host: 'localhost',

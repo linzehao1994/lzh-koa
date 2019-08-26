@@ -9,12 +9,14 @@ import { Logger } from '@/modules';
 import logger from 'koa-logger';
 import json from 'koa-json';
 import bodyParser from 'koa-bodyparser';
+import config from 'config';
 
 import restful from './restful';
 import graphql from './graphql';
 
 const app = new Koa();
 const router = new Router();
+const PORT = config.port || process.env.PORT || 3000;
 
 app.use(json());
 app.use(logger());
@@ -33,9 +35,10 @@ graphql.applyMiddleware({ app });
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.listen(3000, () => {
-  console.log(`You are listening on port 3000`);
-  // console.log(graphql.graphqlPath);
+app.listen(PORT, () => {
+  Logger.info(
+    `You are listening on port ${PORT}, graphql route is ${graphql.graphqlPath}`
+  );
 });
 
 process.on('uncaughtException', (error: Error) => {

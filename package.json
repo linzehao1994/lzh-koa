@@ -25,6 +25,7 @@
     "bluebird": "^3.5.5",
     "bunyan": "^1.8.12",
     "config": "^3.2.2",
+    "dataloader": "^1.4.0",
     "fs-readdir-recursive": "^1.1.0",
     "graphql": "^14.4.2",
     "koa": "^2.8.1",
